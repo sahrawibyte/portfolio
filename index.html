@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Moamar </title>
+    <title>Portfolio Moamar - Expert Cyber & Réseaux</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
     
     <style>
@@ -189,12 +189,29 @@
         .badge-list li { margin-bottom: 10px; list-style: none; }
         .badge-list li::before { content: "🏆 "; }
 
-        /* Style spécifique pour le conteneur du badge THM */
+        /* --- NOUVEAU STYLE POUR LES BADGES CREDLY --- */
+        .credly-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+        .credly-container:hover {
+            border-color: var(--blue);
+            box-shadow: 0 0 15px rgba(88, 166, 255, 0.1);
+        }
+
+        /* Style conteneur THM */
         .thm-badge-container {
             margin-top: 20px;
             border-top: 1px solid var(--border);
             padding-top: 15px;
-            overflow: hidden; /* Empêche le débordement */
+            overflow: hidden;
         }
 
         /* Footer */
@@ -283,25 +300,34 @@
 
         <section>
             <h2>Certifications & Badges</h2>
+            
+            <h3 style="color: var(--text-color); margin-bottom: 15px;">🏆 Badges Officiels</h3>
+            <div class="credly-container">
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f316bbb8-a42f-4a83-a086-817b3a2885f8" data-share-badge-host="https://www.credly.com"></div>
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="fd2cb4c0-ae4d-4845-9ca6-c3a64db37df6" data-share-badge-host="https://www.credly.com"></div>
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="32c0346e-f1f1-4e8b-b181-76876890682c" data-share-badge-host="https://www.credly.com"></div>
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="91d28376-c289-40a6-8dde-aad09aa5fc86" data-share-badge-host="https://www.credly.com"></div>
+
+                <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+
             <div class="grid">
                 <div class="card">
-                    <h3>🛡️ Cybersécurité</h3>
-                    <ul class="badge-list" style="padding-left: 0;">
-                        <li>Advent of Cyber 2025 (TryHackMe)</li>
-                        <li>Introduction to Cybersecurity (Cisco)</li>
-                        <li>Cybersecurity Essentials (Cisco)</li>
-                    </ul>
-                    
+                    <h3>🛡️ Sécurité Offensive</h3>
+                    <p>Suivi de progression sur les laboratoires TryHackMe.</p>
                     <div class="thm-badge-container">
                         <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3677969" style="border:none; width: 100%; height: 260px;"></iframe>
                     </div>
-                    </div>
+                </div>
+
                 <div class="card">
-                    <h3>🌐 Réseaux & Code</h3>
+                    <h3>📚 Compétences Validées</h3>
                     <ul class="badge-list" style="padding-left: 0;">
-                        <li>CCNA 1: Introduction to Networks (Cisco)</li>
-                        <li>Introduction to IoT (Cisco)</li>
-                        <li>C++ Essentials 1 (Cisco)</li>
+                        <li><strong>Cyber :</strong> Introduction to Cybersecurity & Essentials (Cisco)</li>
+                        <li><strong>Réseaux :</strong> CCNA 1: Introduction to Networks</li>
+                        <li><strong>IoT :</strong> Introduction to IoT (Wio Terminal / ESP32)</li>
+                        <li><strong>Dev :</strong> C++ Essentials 1</li>
+                        <li><strong>Veille :</strong> Suivi des vulnérabilités & CTF (Advent of Cyber)</li>
                     </ul>
                 </div>
             </div>
